@@ -70,7 +70,7 @@ extension UIApplication {
 				indicatorWindow?.addSubview(indicator)
 			}
 		}
-		guard let indicator = indicatorWindow?.subviews.first as? FTLinearActivityIndicator else {return}
+		guard let indicator = indicatorWindow?.subviews.last as? FTLinearActivityIndicator else {return}
 		indicator.tintColor = statusBarStyle == .default ? UIColor.black : UIColor.white
 		if visible {
 			indicatorWindow?.isHidden = self.isStatusBarHidden
