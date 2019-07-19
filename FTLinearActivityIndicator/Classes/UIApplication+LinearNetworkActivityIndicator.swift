@@ -61,6 +61,7 @@ extension UIApplication {
 				indicatorWindow = UIWindow(frame: statusBarFrame)
 				indicatorWindow?.windowLevel = UIWindow.Level.statusBar + 1
 				indicatorWindow?.isUserInteractionEnabled = false
+                indicatorWindow?.rootViewController = UIViewController()
 				
 				let indicator = FTLinearActivityIndicator(frame: CGRect(x: indicatorWindow!.frame.width - 74, y: 6, width: 44, height: 4))
 				indicator.isUserInteractionEnabled = false
